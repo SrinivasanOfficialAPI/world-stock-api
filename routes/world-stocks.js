@@ -27,7 +27,7 @@ router.get('/world-stocks/worlds-largest-companies/', async (req, res) => {
 			const html = await fetchHTML(url);
 			return html;
 		} catch (error) {
-			console.error('Error fetching the HTML:');
+			console.error('Error fetching the HTML:',error);
 		}
 	}
 	const html = await main();
