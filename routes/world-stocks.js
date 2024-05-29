@@ -8,7 +8,7 @@ var finalJson = [];
 
 async function fetchHTML(url) {
 	// Launch a headless browser
-	const browser = await puppeteer.launch();
+	const browser = await puppeteer.launch({ headless: false });
 	// Open a new page
 	const page = await browser.newPage();
 	// Navigate to the URL
